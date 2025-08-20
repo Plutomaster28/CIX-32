@@ -1,0 +1,297 @@
+$date
+	Thu Aug 14 20:03:17 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_cix32_working $end
+$var wire 32 ! pc_out [31:0] $end
+$var wire 1 " mem_we $end
+$var wire 32 # mem_wdata [31:0] $end
+$var wire 1 $ mem_re $end
+$var wire 32 % mem_addr [31:0] $end
+$var wire 1 & halted $end
+$var wire 32 ' flags_out [31:0] $end
+$var wire 1 ( exception $end
+$var wire 32 ) esp_out [31:0] $end
+$var wire 32 * esi_out [31:0] $end
+$var wire 32 + edx_out [31:0] $end
+$var wire 32 , edi_out [31:0] $end
+$var wire 32 - ecx_out [31:0] $end
+$var wire 32 . ebx_out [31:0] $end
+$var wire 32 / ebp_out [31:0] $end
+$var wire 32 0 eax_out [31:0] $end
+$var reg 1 1 clk $end
+$var reg 2 2 mem_delay [1:0] $end
+$var reg 32 3 mem_rdata [31:0] $end
+$var reg 1 4 mem_ready $end
+$var reg 1 5 rst_n $end
+$scope module cpu $end
+$var wire 1 1 clk $end
+$var wire 32 6 eax_out [31:0] $end
+$var wire 32 7 ebp_out [31:0] $end
+$var wire 32 8 ebx_out [31:0] $end
+$var wire 32 9 ecx_out [31:0] $end
+$var wire 32 : edi_out [31:0] $end
+$var wire 32 ; edx_out [31:0] $end
+$var wire 32 < esi_out [31:0] $end
+$var wire 32 = esp_out [31:0] $end
+$var wire 1 ( exception $end
+$var wire 32 > flags_out [31:0] $end
+$var wire 1 & halted $end
+$var wire 32 ? mem_rdata [31:0] $end
+$var wire 1 4 mem_ready $end
+$var wire 32 @ pc_out [31:0] $end
+$var wire 1 5 rst_n $end
+$var parameter 32 A AF $end
+$var parameter 5 B ALU_ADD $end
+$var parameter 5 C ALU_AND $end
+$var parameter 5 D ALU_CMP $end
+$var parameter 5 E ALU_DEC $end
+$var parameter 5 F ALU_INC $end
+$var parameter 5 G ALU_MOV $end
+$var parameter 5 H ALU_NEG $end
+$var parameter 5 I ALU_NOP $end
+$var parameter 5 J ALU_NOT $end
+$var parameter 5 K ALU_OR $end
+$var parameter 5 L ALU_SHL $end
+$var parameter 5 M ALU_SHR $end
+$var parameter 5 N ALU_SUB $end
+$var parameter 5 O ALU_TEST $end
+$var parameter 5 P ALU_XOR $end
+$var parameter 32 Q CF $end
+$var parameter 3 R DECODE $end
+$var parameter 3 S EXECUTE $end
+$var parameter 3 T FETCH $end
+$var parameter 3 U MEMORY $end
+$var parameter 32 V OF $end
+$var parameter 32 W PF $end
+$var parameter 32 X SF $end
+$var parameter 3 Y WRITEBACK $end
+$var parameter 32 Z ZF $end
+$var reg 32 [ alu_a [31:0] $end
+$var reg 32 \ alu_b [31:0] $end
+$var reg 5 ] alu_op [4:0] $end
+$var reg 32 ^ alu_result [31:0] $end
+$var reg 32 _ cr0 [31:0] $end
+$var reg 32 ` cr2 [31:0] $end
+$var reg 32 a cr3 [31:0] $end
+$var reg 32 b cr4 [31:0] $end
+$var reg 16 c cs [15:0] $end
+$var reg 32 d decode_pc [31:0] $end
+$var reg 16 e ds [15:0] $end
+$var reg 16 f es [15:0] $end
+$var reg 1 g exception_flag $end
+$var reg 8 h exception_vector [7:0] $end
+$var reg 4 i exec_state [3:0] $end
+$var reg 32 j execute_pc [31:0] $end
+$var reg 4 k fetch_bytes_needed [3:0] $end
+$var reg 4 l fetch_bytes_received [3:0] $end
+$var reg 128 m fetch_instruction [127:0] $end
+$var reg 32 n fetch_pc [31:0] $end
+$var reg 32 o flags [31:0] $end
+$var reg 16 p fs [15:0] $end
+$var reg 16 q gs [15:0] $end
+$var reg 1 r has_immediate $end
+$var reg 1 s has_modrm $end
+$var reg 4 t instruction_length [3:0] $end
+$var reg 32 u mem_addr [31:0] $end
+$var reg 1 $ mem_re $end
+$var reg 32 v mem_wdata [31:0] $end
+$var reg 1 " mem_we $end
+$var reg 32 w memory_address [31:0] $end
+$var reg 32 x memory_pc [31:0] $end
+$var reg 1 y memory_read $end
+$var reg 1 z memory_write $end
+$var reg 8 { modrm [7:0] $end
+$var reg 32 | new_flags [31:0] $end
+$var reg 8 } opcode [7:0] $end
+$var reg 32 ~ pc [31:0] $end
+$var reg 3 !" pipeline_state [2:0] $end
+$var reg 16 "" ss [15:0] $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 #" i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b110 Z
+b100 Y
+b111 X
+b10 W
+b1011 V
+b11 U
+b0 T
+b10 S
+b1 R
+b0 Q
+b100 P
+b1100 O
+b1 N
+b110 M
+b101 L
+b11 K
+b1010 J
+b1110 I
+b1001 H
+b1101 G
+b111 F
+b1000 E
+b1011 D
+b10 C
+b0 B
+b100 A
+$end
+#0
+$dumpvars
+b1000000000000 #"
+b0 ""
+b0 !"
+b0 ~
+bx }
+b0 |
+bx {
+xz
+xy
+bx x
+bx w
+bx v
+bx u
+bx t
+xs
+xr
+b0 q
+b0 p
+b0 o
+bx n
+bx m
+b0 l
+b1 k
+bx j
+b0 i
+bx h
+0g
+b0 f
+b0 e
+bx d
+b0 c
+b0 b
+b0 a
+b0 `
+b0 _
+bx ^
+bx ]
+bx \
+bx [
+b0 @
+b0 ?
+b0 >
+b1000000000000 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+05
+14
+b0 3
+b0 2
+01
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b1000000000000 )
+0(
+b0 '
+0&
+bx %
+0$
+bx #
+0"
+b0 !
+$end
+#5
+11
+#10
+01
+#15
+11
+#20
+01
+#25
+11
+#30
+01
+15
+#35
+b1 !"
+b0 n
+b100 l
+bx00000000000000000000000000000000 m
+0$
+b0 %
+b0 u
+11
+#40
+01
+#45
+b10 !"
+b110 h
+1(
+1g
+b0 }
+b0 d
+11
+#50
+01
+#55
+b11 !"
+b0 j
+11
+#60
+01
+#65
+b100 !"
+b0 x
+11
+#70
+01
+#75
+0z
+0y
+0r
+0s
+b0 l
+b0 !"
+bx !
+bx @
+bx ~
+11
+#80
+01
+#85
+b1 !"
+bx n
+b100 l
+0$
+bx %
+bx u
+11
+#90
+01
+#95
+b10 !"
+bx d
+11
+#96

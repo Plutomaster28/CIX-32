@@ -1,0 +1,126 @@
+$date
+	Thu Aug 14 19:51:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_demo $end
+$var wire 32 ! pc [31:0] $end
+$var wire 1 " halted $end
+$var wire 32 # eax [31:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % rst_n $end
+$scope module dut $end
+$var wire 1 $ clk $end
+$var wire 1 % rst_n $end
+$var reg 32 & eax [31:0] $end
+$var reg 1 " halted $end
+$var reg 8 ' opcode [7:0] $end
+$var reg 32 ( pc [31:0] $end
+$var reg 3 ) state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+bx '
+b0 &
+0%
+0$
+b0 #
+0"
+b0 !
+$end
+#5
+1$
+#10
+0$
+#15
+1$
+#20
+0$
+1%
+#25
+b1 )
+b1000000 '
+1$
+#30
+0$
+#35
+b0 )
+b1 !
+b1 (
+b1 #
+b1 &
+1$
+#40
+0$
+#45
+b1 )
+1$
+#50
+0$
+#55
+b0 )
+b10 !
+b10 (
+b10 #
+b10 &
+1$
+#60
+0$
+#65
+b1 )
+b1001000 '
+1$
+#70
+0$
+#75
+b0 )
+b11 !
+b11 (
+b1 #
+b1 &
+1$
+#80
+0$
+#85
+b1 )
+b1000000 '
+1$
+#90
+0$
+#95
+b0 )
+b100 !
+b100 (
+b10 #
+b10 &
+1$
+#100
+0$
+#105
+b1 )
+b11110100 '
+1$
+#110
+0$
+#115
+1"
+1$
+#120
+0$
+#125
+1$
+#130
+0$
+#135
+1$

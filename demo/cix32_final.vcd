@@ -1,0 +1,278 @@
+$date
+	Thu Aug 14 20:08:30 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_cix32_final $end
+$var wire 32 ! pc [31:0] $end
+$var wire 1 " halted $end
+$var wire 32 # flags [31:0] $end
+$var wire 32 $ ecx [31:0] $end
+$var wire 32 % eax [31:0] $end
+$var reg 1 & clk $end
+$var reg 1 ' rst_n $end
+$scope module dut $end
+$var wire 1 & clk $end
+$var wire 32 ( eax [31:0] $end
+$var wire 32 ) ecx [31:0] $end
+$var wire 32 * flags [31:0] $end
+$var wire 1 " halted $end
+$var wire 32 + pc [31:0] $end
+$var wire 1 ' rst_n $end
+$var parameter 32 , DECODE $end
+$var parameter 32 - EXECUTE $end
+$var parameter 32 . FETCH $end
+$var reg 32 / flags_reg [31:0] $end
+$var reg 1 0 halted_reg $end
+$var reg 8 1 opcode [7:0] $end
+$var reg 32 2 pc_reg [31:0] $end
+$var reg 3 3 state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 .
+b10 -
+b1 ,
+$end
+#0
+$dumpvars
+b0 3
+b0 2
+bx 1
+00
+b0 /
+b0 +
+b0 *
+b0 )
+b0 (
+0'
+0&
+b0 %
+b0 $
+b0 #
+0"
+b0 !
+$end
+#5
+1&
+#10
+0&
+#15
+1&
+#20
+0&
+#25
+1&
+#30
+0&
+1'
+#35
+b1 3
+b10111000 1
+1&
+#40
+0&
+#45
+b10 3
+1&
+#50
+0&
+#55
+b0 3
+b101 !
+b101 +
+b101 2
+b1010 %
+b1010 (
+1&
+#60
+0&
+#65
+b1 3
+b1000000 1
+1&
+#70
+0&
+#75
+b10 3
+1&
+#80
+0&
+#85
+b0 3
+b110 !
+b110 +
+b110 2
+b1011 %
+b1011 (
+1&
+#90
+0&
+#95
+b1 3
+b1000001 1
+1&
+#100
+0&
+#105
+b10 3
+1&
+#110
+0&
+#115
+b0 3
+b111 !
+b111 +
+b111 2
+b1 $
+b1 )
+1&
+#120
+0&
+#125
+b1 3
+1&
+#130
+0&
+#135
+b10 3
+1&
+#140
+0&
+#145
+b0 3
+b1000 !
+b1000 +
+b1000 2
+b10 $
+b10 )
+1&
+#150
+0&
+#155
+b1 3
+b1001000 1
+1&
+#160
+0&
+#165
+b10 3
+1&
+#170
+0&
+#175
+b0 3
+b1001 !
+b1001 +
+b1001 2
+b1010 %
+b1010 (
+1&
+#180
+0&
+#185
+b1 3
+b1000000 1
+1&
+#190
+0&
+#195
+b10 3
+1&
+#200
+0&
+#205
+b0 3
+b1010 !
+b1010 +
+b1010 2
+b1011 %
+b1011 (
+1&
+#210
+0&
+#215
+b1 3
+b1001001 1
+1&
+#220
+0&
+#225
+b10 3
+1&
+#230
+0&
+#235
+b0 3
+b1011 !
+b1011 +
+b1011 2
+b1 $
+b1 )
+1&
+#240
+0&
+#245
+b1 3
+b1000000 1
+1&
+#250
+0&
+#255
+b10 3
+1&
+#260
+0&
+#265
+b0 3
+b1100 !
+b1100 +
+b1100 2
+b1100 %
+b1100 (
+1&
+#270
+0&
+#275
+b1 3
+b11110100 1
+1&
+#280
+0&
+#285
+b10 3
+1&
+#290
+0&
+#295
+b0 3
+1"
+10
+1&
+#300
+0&
+#305
+1&
+#310
+0&
+#315
+1&
+#320
+0&
+#325
+1&
+#330
+0&
+#335
+1&
+#340
+0&
+#345
+1&
+#346

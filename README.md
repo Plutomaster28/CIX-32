@@ -1,8 +1,8 @@
 # CIX-32 Core Project
 
-An educational / experimental 32-bit x86-compatible (subset first, then expansion) soft-core named **CIX-32**, targeting open-source ASIC flow (OpenROAD, 180nm) and FPGA prototyping.
+An educational / experimental 32-bit x86-compatible subset soft-core named **CIX-32**, targeting open-source ASIC flow (OpenROAD, 180nm) and FPGA prototyping.
 
-> Ambition: Eventually support real mode + protected mode, paging, x87 FPU, and selected SIMD (SSE baseline) while remaining understandable & verifiable.
+> Ambition: Eventually support real mode + protected mode, paging, x87 FPU, and selected SIMD (SSE baseline) while remaining understandable & verifiable but without implementing the entirety of x86 since I don't have the money nor guts to challenge Intel or AMD.
 
 ## High-Level Milestones (Incremental Roadmap)
 1. **M0: Infrastructure & Minimal Core Skeleton**
@@ -22,8 +22,6 @@ An educational / experimental 32-bit x86-compatible (subset first, then expansio
 10. **M9: Pipeline Optimizations (Forwarding, simple branch prediction)**
 11. **M10: Exceptions, Debug, Performance Counters**
 12. **M11: Synthesis/OpenROAD Flow Scripts & Timing Closure @180nm**
-
-We will grow instruction coverage iteratively; not all of x86 at once.
 
 ## Directory Layout
 ```
@@ -45,16 +43,3 @@ rtl/
 ## Minimal Initial Subset (Target for First Running Instructions)
 - 16-bit real mode (reset state) subset of instructions: `MOV r16, imm16`, `MOV r/m16, r16`, `MOV r16, r/m16`, `ADD`, `SUB`, `INC`, `DEC`, `JMP rel16`, `NOP`, `PUSH r16`, `POP r16`, `CALL rel16`, `RET`, `HLT`.
 - Flags tracked: CF, ZF, SF, OF, PF, AF (AF optional early).
-
-## Build & Simulation (Initial Placeholder)
-We'll script a simple Verilator + Icarus + (later) cocotb environment. TBD.
-
-## OpenROAD Flow (Later Milestone)
-- Provide `config/` with technology LEF/Lib references (user-supplied PDK).
-- Focus on timing for ~50-80MHz @180nm initial.
-
-## License
-TBD (suggest Apache-2.0 or MIT).
-
----
-This README will expand as modules gain functionality.
